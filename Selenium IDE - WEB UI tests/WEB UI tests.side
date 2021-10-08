@@ -1,0 +1,1056 @@
+{
+  "id": "4b5024c0-f0e5-431c-8072-7280af36958d",
+  "version": "2.0",
+  "name": "WEB UI tests",
+  "url": "https://www.tundra.com",
+  "tests": [{
+    "id": "7234253f-4d43-40e7-9807-6e65616a52c6",
+    "name": "TC 2: Open homepage, select product, login and add to chart (verify)",
+    "commands": [{
+      "id": "cea4a9cb-a23b-4875-9b50-9c400499b96e",
+      "comment": "",
+      "command": "open",
+      "target": "/search?q=*",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6fe58f2-00ff-4171-9d54-fd505177b2e6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x723",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a8d6ce8-4355-4405-ac71-a70a05a2f03e",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI",
+      "targets": [
+        ["css=div:nth-child(1) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/shop/hello-happiness-designs/product/sunflower-wood-studs/?pn=1&pos=0')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57d18487-6ee6-4ce2-982a-a77ff853522d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.zjiSy6OezxGZaDdUSFmR > .CwnOs4oL8oWmYWqSY_56",
+      "targets": [
+        ["css=.zjiSy6OezxGZaDdUSFmR > .CwnOs4oL8oWmYWqSY_56", "css:finder"],
+        ["xpath=(//button[@type='button'])[23]", "xpath:attributes"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[3]/div/div[3]/span/button", "xpath:idRelative"],
+        ["xpath=//span/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65428b5f-52c0-40f8-a38c-6686a38073fb",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.Mui-focused > .MuiInputBase-input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='authentication-form']/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c68cd80-710b-46d1-814c-fa5b6d68772b",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.Mui-focused > .MuiInputBase-input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='authentication-form']/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "test@tundra.com"
+    }, {
+      "id": "ff114b7e-3c64-4f72-8e54-b7e75ff11952",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.Mui-focused > .MuiInputBase-input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='authentication-form']/div[2]/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05e4c8b4-d18d-4ab1-bebb-f51a809048d2",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.Mui-focused > .MuiInputBase-input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='authentication-form']/div[2]/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "test@tundra.com"
+    }, {
+      "id": "07a304dc-2d67-40ce-995c-aab30b19e686",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-modal-text",
+      "targets": [
+        ["css=.btn-modal-text", "css:finder"],
+        ["xpath=//form[@id='authentication-form']/button/span", "xpath:idRelative"],
+        ["xpath=//form/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed295c6a-a5ae-48c1-a015-85919b7c66cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rSsXNuq6aMqVDdaJKwIK",
+      "targets": [
+        ["css=.rSsXNuq6aMqVDdaJKwIK", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[4]/button/div", "xpath:idRelative"],
+        ["xpath=//div[4]/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84b6c3bc-8228-4e2b-ae95-67d164d553ca",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.zO1jQsmDE9WYA9sl9uTw",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "6d723ff0-446e-475e-8577-b5b38888da2b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.zO1jQsmDE9WYA9sl9uTw",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5e5190a7-30ea-4ee5-9c24-f9ae4490057a",
+    "name": "TC 3: Add product to cart (verify), delete product (verify)",
+    "commands": [{
+      "id": "e8b477cb-1a31-4eb3-8fcd-f134bd56dca5",
+      "comment": "",
+      "command": "open",
+      "target": "/search?q=*",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af8b6ce1-0708-4c92-9c17-bee591409d77",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x707",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf6eb03a-4a86-463c-a0b8-0fcf9f0e42e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI",
+      "targets": [
+        ["css=div:nth-child(2) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/shop/la-roseason/product/button-down-checked-blouse-coat-lstye-ty0290/?pn=1&pos=1')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39c0038f-8e41-4744-b660-28f0d4c9e1ed",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.CqCZV8Vo9fD_TRH2nxV_",
+      "targets": [],
+      "value": "name"
+    }, {
+      "id": "5a3e323c-7b81-49e7-8752-33802ee3a354",
+      "comment": "",
+      "command": "echo",
+      "target": "Name var = ${name}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28c7e890-6add-4516-a4ef-6b2bc2d2bda6",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "id=quantitySelect",
+      "targets": [
+        ["id=quantitySelect", "id"],
+        ["css=#quantitySelect", "css:finder"],
+        ["xpath=//div[@id='quantitySelect']", "xpath:attributes"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[4]/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fffd277c-56eb-4e1f-8049-78cc3ff361a6",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.MuiListItem-root:nth-child(2)",
+      "targets": [
+        ["css=.MuiListItem-root:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='menu-']/div[3]/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'2 packs (16 pieces)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2edec5e6-c0c5-4f94-be93-1bb039b1eef5",
+      "comment": "",
+      "command": "//waitForElementPresent",
+      "target": "",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f65fe478-b9d8-4d92-b4a9-e3e389d35209",
+      "comment": "",
+      "command": "click",
+      "target": "css=body",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5eaa8a46-6791-4831-9d74-863b07f8cc16",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiListItem-root:nth-child(10)",
+      "targets": [
+        ["css=.MuiListItem-root:nth-child(10)", "css:finder"],
+        ["xpath=//div[@id='menu-']/div[3]/ul/li[10]", "xpath:idRelative"],
+        ["xpath=//li[10]", "xpath:position"],
+        ["xpath=//li[contains(.,'10+ packs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "39a8a72f-864f-4c02-ab90-4e54fb657962",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.rSsXNuq6aMqVDdaJKwIK",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "d7fd0e42-bffb-4746-90a6-37769bf6bd4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rSsXNuq6aMqVDdaJKwIK",
+      "targets": [
+        ["css=.rSsXNuq6aMqVDdaJKwIK", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[5]/button/div", "xpath:idRelative"],
+        ["xpath=//div[5]/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f84bd6b5-d6f1-4357-b7a3-57fa6f84b4b3",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1d7fcf1-a538-4d52-900e-8498a249b1c3",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c9012c9-201a-43a1-9745-2d7ce44501cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.uRjnryjVMYxkDOWoAUnF",
+      "targets": [
+        ["css=.uRjnryjVMYxkDOWoAUnF", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbbde68e-b6cb-4952-992b-dde4b5066258",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.uRjnryjVMYxkDOWoAUnF",
+      "targets": [
+        ["css=.uRjnryjVMYxkDOWoAUnF", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "064af7cb-a2a6-4cba-8b36-891e715986c4",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.uRjnryjVMYxkDOWoAUnF",
+      "targets": [
+        ["css=.uRjnryjVMYxkDOWoAUnF", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e23cb5f6-165b-42b9-986e-27b47b80f258",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=${name}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d546f07c-8e52-44f4-a626-c4d350ac4e8b",
+      "comment": "",
+      "command": "echo",
+      "target": "Name var = ${name}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98f0245e-f5ff-4050-b4bb-51f5bd07a963",
+      "comment": "",
+      "command": "//click",
+      "target": "css=#Restoor\\ Skin\\ Essentials .ZpZjdJrbNE23fRBWwSlb:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2068a0d5-08be-4f95-ae8d-13646e1d8539",
+      "comment": "",
+      "command": "//click",
+      "target": "css=#La\\ Roseason > .\\_zkrHexJUtrwfAreHxfl > div:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d61e4621-9fa0-48a1-a941-4d8dcdff8aa2",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.Qds_2co0j_HCoz44oEzq",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd33f2ec-ac20-4293-a786-d784b192aa61",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.ZpZjdJrbNE23fRBWwSlb:nth-child(2)",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "86a3043f-7547-4f38-90a8-ca013e543354",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ZpZjdJrbNE23fRBWwSlb:nth-child(2)",
+      "targets": [
+        ["css=.ZpZjdJrbNE23fRBWwSlb:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='La Roseason']/div/div[2]/div/div[2]/div[2]/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96a454a4-0817-438d-9a42-8a6ac9d4d605",
+      "comment": "",
+      "command": "//waitForElementNotVisible",
+      "target": "",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "8b72a9a1-79d8-4260-8dd6-1f813d2d82be",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "linkText=${name}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3555ee09-0b55-439d-ae54-a0d39efdf786",
+    "name": "TC 4: Mark 2 favourites, go to favourites (verify)",
+    "commands": [{
+      "id": "c716a1a1-fad0-4e69-98c7-87e77754de5e",
+      "comment": "",
+      "command": "open",
+      "target": "/search?q=*",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "408f166d-151b-443b-87f9-0efff0c7d75d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x707",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3eb88c29-4fe3-43e0-8bba-657472abb9a2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(2) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI",
+      "targets": [
+        ["css=div:nth-child(2) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[2]/div[2]/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/shop/la-roseason/product/button-down-checked-blouse-coat-lstye-ty0290/?pn=1&pos=1')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "310d731d-bdaf-43c5-85f4-0762ed77756d",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "css=div:nth-child(2) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI@href",
+      "targets": [],
+      "value": "URL1a"
+    }, {
+      "id": "1d6eab07-384f-4ca9-9651-1bb98da13fca",
+      "comment": "",
+      "command": "echo",
+      "target": "URL1a var = ${URL1a}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd851215-d07d-4cbd-9897-17204e6c9959",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > .sMKpNSg3dH8_Jm4PJ6UX:nth-child(1) path:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bddf1c84-c91e-485c-ba49-1c7f4b7f0f3f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(3) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3887a4cc-2d79-4a9e-b958-4f3299fb7f77",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "css=div:nth-child(3) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI@href",
+      "targets": [],
+      "value": "URL2a"
+    }, {
+      "id": "aecacc07-6e83-42a9-9ab3-612616fae239",
+      "comment": "",
+      "command": "echo",
+      "target": "URL2a var = ${URL2a}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43bc3b5c-488b-47b0-b4b9-efbe5436c543",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > .sMKpNSg3dH8_Jm4PJ6UX:nth-child(1) path:nth-child(1)",
+      "targets": [
+        ["css=div:nth-child(3) > .sMKpNSg3dH8_Jm4PJ6UX:nth-child(1) path:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e6a8682-2912-40ec-a85e-8fbea30f9720",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.P5D11awNBX__0OFQm_Rd",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1fbd193e-cdab-4d4c-9c0f-8147a48f3c87",
+      "comment": "",
+      "command": "click",
+      "target": "css=.P5D11awNBX__0OFQm_Rd",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1163425b-4b78-4e50-805b-c3d6da468c33",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.RL5io_W_qqLFb_3nWm_H:nth-child(1) span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a52a25c0-8177-415d-a896-8fb13407db3e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.RL5io_W_qqLFb_3nWm_H:nth-child(1) span",
+      "targets": [
+        ["css=.RL5io_W_qqLFb_3nWm_H:nth-child(1) span", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Buyer Center')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "191bdbba-f579-4b09-b703-62aff4edc4a1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Favorites",
+      "targets": [
+        ["linkText=Favorites", "linkText"],
+        ["css=li:nth-child(3) > .CwnOs4oL8oWmYWqSY_56", "css:finder"],
+        ["xpath=//a[contains(text(),'Favorites')]", "xpath:link"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div/div/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'favorites')]", "xpath:href"],
+        ["xpath=//div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Favorites')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ac84441-fd71-4142-b76b-f84c8db978ad",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Favorites",
+      "targets": [
+        ["linkText=Favorites", "linkText"],
+        ["css=li:nth-child(3) > .CwnOs4oL8oWmYWqSY_56", "css:finder"],
+        ["xpath=//a[contains(text(),'Favorites')]", "xpath:link"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div/div/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'favorites')]", "xpath:href"],
+        ["xpath=//div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Favorites')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c68a9980-cfc5-471a-ad48-ded28e177c8f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.zZV9AKJPLU6SBTKQL9md",
+      "targets": [
+        ["css=.zZV9AKJPLU6SBTKQL9md", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2510dfec-a2e9-4610-9d5f-ae942117ef04",
+      "comment": "",
+      "command": "click",
+      "target": "css=.zZV9AKJPLU6SBTKQL9md",
+      "targets": [
+        ["css=.zZV9AKJPLU6SBTKQL9md", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e357773e-0cd1-435a-8594-b1ff212dd040",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(1) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI",
+      "targets": [
+        ["css=div:nth-child(1) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div/div[2]/div[2]/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/shop/la-roseason/product/button-down-checked-blouse-coat-lstye-ty0290/?pn=2&pos=1')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7f8f4e2-3a72-4030-9052-7714e747de77",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "css=div:nth-child(1) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI@href",
+      "targets": [],
+      "value": "URL1b"
+    }, {
+      "id": "5704d298-9cec-480b-ad0f-04379c034ca1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(2) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d5dc1d4-3d87-46c4-83a8-9dbb28a36645",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "css=div:nth-child(2) > .sMKpNSg3dH8_Jm4PJ6UX .ILxyZFGfxclHiZ_cyrWI@href",
+      "targets": [],
+      "value": "URL2b"
+    }, {
+      "id": "92b7680a-cfa0-43d4-ab5a-9005bea4c8ca",
+      "comment": "",
+      "command": "echo",
+      "target": "URL1b var = ${URL1b}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7a5e183-cf5e-47a5-b0f5-ca2f6094974b",
+      "comment": "",
+      "command": "echo",
+      "target": "URL2b var = ${URL2b}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59a3cc49-f2a3-41ff-8f6e-af46908290d8",
+      "comment": "",
+      "command": "echo",
+      "target": "URL1a var = ${URL1a}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "baa90147-63ae-4144-91bc-03b71a9272d9",
+      "comment": "",
+      "command": "echo",
+      "target": "URL2a var = ${URL2a}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12c3f415-8c80-4992-ba06-f98e57bc005f",
+      "comment": "",
+      "command": "//verify",
+      "target": "URL1b",
+      "targets": [],
+      "value": "${URL2a}"
+    }, {
+      "id": "ceeb5c68-db37-4245-b60b-d8d1274fc3d6",
+      "comment": "",
+      "command": "//verify",
+      "target": "URL2b",
+      "targets": [],
+      "value": "${URL1a}"
+    }]
+  }, {
+    "id": "a066a903-fedd-4845-a4fe-a95476a67dd8",
+    "name": "TC 5: Apply filters and sorting, show product detail page, add product to cart (verify)",
+    "commands": [{
+      "id": "bd874b32-e600-43a3-88d1-e3e82177e40c",
+      "comment": "",
+      "command": "open",
+      "target": "/search?q=*",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "587dd4b8-a38f-4cfc-beb6-c44e89fd131b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x707",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b427aa1c-7f9c-4042-a891-cef1dae67862",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.KtymxzIR3G4TVYLdk5Iq > .MuiSelect-root",
+      "targets": [
+        ["css=.KtymxzIR3G4TVYLdk5Iq > .MuiSelect-root", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div/div/div[4]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "daef29d0-dab8-4f23-8dac-e0de1a4c07b6",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.MuiPaper-root",
+      "targets": [
+        ["css=.MuiPaper-root", "css:finder"],
+        ["xpath=//div[@id='menu-']/div[3]", "xpath:idRelative"],
+        ["xpath=//body/div[4]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d802860b-d7bc-402a-a770-40839906b5f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=body",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c41fa8b0-e057-42dd-a082-0d85f3776e3e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiListItem-root:nth-child(8)",
+      "targets": [
+        ["css=.MuiListItem-root:nth-child(8)", "css:finder"],
+        ["xpath=//div[@id='menu-']/div[3]/ul/li[8]", "xpath:idRelative"],
+        ["xpath=//li[8]", "xpath:position"],
+        ["xpath=//li[contains(.,'Netherlands')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eec941ef-b795-467b-b984-2866f452670f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Eds2K0MM9RRTVE_mZuCn",
+      "targets": [
+        ["css=.Eds2K0MM9RRTVE_mZuCn", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[3]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Back to top')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5cb4ed7-94af-492a-8a8f-0e683c12e9a1",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.\\_X19n206Kt95vuMdcTz8 > .MuiSelect-root",
+      "targets": [
+        ["css=.\\_X19n206Kt95vuMdcTz8 > .MuiSelect-root", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68995cb4-76a3-484b-bb47-b9767ae91631",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=#menu- > div:nth-child(1)",
+      "targets": [
+        ["css=#menu- > div:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='menu-']/div", "xpath:idRelative"],
+        ["xpath=//body/div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d09707cf-5f12-47f8-b978-d847a1db1526",
+      "comment": "",
+      "command": "click",
+      "target": "css=body",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b20c6532-0c0e-4f4e-a805-ef75e2dbf4c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiListItem-root:nth-child(2)",
+      "targets": [
+        ["css=.MuiListItem-root:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='menu-']/div[3]/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'Most Popular')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0d7d0b5-4e17-441d-b514-d326b11f4de5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=div:nth-child(5) .ILxyZFGfxclHiZ_cyrWI",
+      "targets": [
+        ["css=div:nth-child(5) .ILxyZFGfxclHiZ_cyrWI", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[2]/div[5]/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/shop/izy-bottles/product/izy-kids-350-ml-green-superhero/?pn=1&pos=4')]", "xpath:href"],
+        ["xpath=//div[5]/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07cc76d3-49b4-402b-bfb6-014a7eedb55c",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=div:nth-child(5) .ILxyZFGfxclHiZ_cyrWI",
+      "targets": [
+        ["css=div:nth-child(5) .ILxyZFGfxclHiZ_cyrWI", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[2]/div[5]/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/shop/izy-bottles/product/izy-kids-350-ml-green-superhero/?pn=1&pos=4')]", "xpath:href"],
+        ["xpath=//div[5]/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7822c7d6-f157-4cfc-bc36-605fe3e220b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(4) .ILxyZFGfxclHiZ_cyrWI",
+      "targets": [
+        ["css=div:nth-child(4) .ILxyZFGfxclHiZ_cyrWI", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[2]/div[4]/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/shop/lovemyrte/product/bird-cushion-cover-blackbird-40x40cm/?pn=1&pos=3')]", "xpath:href"],
+        ["xpath=//div[4]/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "150b7980-6814-4e87-9573-e3e27cf9db70",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b80cc0fb-910c-4785-b3ce-527db0494253",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm",
+      "targets": [
+        ["css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ebfdd73-bb9f-47e8-a5fd-74f6903d5d72",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm",
+      "targets": [
+        ["css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1333c247-1af0-49a5-a86f-ca99af3f9859",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm",
+      "targets": [
+        ["css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "97a8e925-49dd-446b-a61b-ffeb3efac265",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm",
+      "targets": [
+        ["css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "50f5b199-ab9b-49f5-91c1-d5e72f7ff4b1",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.CqCZV8Vo9fD_TRH2nxV_",
+      "targets": [],
+      "value": "name"
+    }, {
+      "id": "3c4be7d9-d14a-4ead-b122-99b721aac5ec",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,551)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4bb020c-676b-4ed5-af2c-b9ce1728db6a",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "id=quantitySelect",
+      "targets": [
+        ["id=quantitySelect", "id"],
+        ["css=#quantitySelect", "css:finder"],
+        ["xpath=//div[@id='quantitySelect']", "xpath:attributes"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[2]/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47bae7c3-74d0-4ed3-8db8-2f6df825d009",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.MuiListItem-root:nth-child(2)",
+      "targets": [
+        ["css=.MuiListItem-root:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='menu-']/div[3]/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'2 units')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18ee26ef-c4ea-4bc2-bfec-c78f9e67580f",
+      "comment": "",
+      "command": "click",
+      "target": "css=body",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c82631d3-50a4-4541-b7b2-620c028c30a6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#menu- > div:nth-child(1)",
+      "targets": [
+        ["css=#menu- > div:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='menu-']/div", "xpath:idRelative"],
+        ["xpath=//body/div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "016fbfa3-9caa-47b8-a8b1-a2cd6b587b97",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rSsXNuq6aMqVDdaJKwIK",
+      "targets": [
+        ["css=.rSsXNuq6aMqVDdaJKwIK", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[3]/button/div", "xpath:idRelative"],
+        ["xpath=//div[3]/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14ad84b4-bfea-408c-b4f6-9a8f3035bdb5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.uRjnryjVMYxkDOWoAUnF",
+      "targets": [
+        ["css=.uRjnryjVMYxkDOWoAUnF", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dab68c0-2197-4675-8f18-92b3921e2f30",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.uRjnryjVMYxkDOWoAUnF",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9732786e-bcc8-4129-9338-f59b95b1b9e8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.uRjnryjVMYxkDOWoAUnF",
+      "targets": [
+        ["css=.uRjnryjVMYxkDOWoAUnF", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ea9c885-442e-48da-861c-ff56388342e4",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.uRjnryjVMYxkDOWoAUnF",
+      "targets": [
+        ["css=.uRjnryjVMYxkDOWoAUnF", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "478f04b4-66f5-4ca5-aded-fc8acd70cb9c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=${name}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c7007d41-8ce1-4343-9361-e58b99daf0cb",
+    "name": "TC 1: Click through homepage product pics and product pics detail page",
+    "commands": [{
+      "id": "0d0aa8cf-abf1-41fb-bcd9-3ac05f37e091",
+      "comment": "",
+      "command": "open",
+      "target": "/search?q=*",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d08041a-902f-4099-a000-794163de8511",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x707",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d50a60f-0d96-4356-9a52-1dc9284aacfb",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(4) .HT9g4kA6qvr9AzRTwLfs use",
+      "targets": [
+        ["css=div:nth-child(4) .HT9g4kA6qvr9AzRTwLfs use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "397e40be-59a3-4357-aee1-f481a31a2e2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(4) .SsjU3Ic9Waow6y0fqovx use",
+      "targets": [
+        ["css=div:nth-child(4) .SsjU3Ic9Waow6y0fqovx use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2194481e-0d27-4237-8a5f-0aeea2296015",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(4) .ILxyZFGfxclHiZ_cyrWI",
+      "targets": [
+        ["css=div:nth-child(4) .ILxyZFGfxclHiZ_cyrWI", "css:finder"],
+        ["xpath=//div[@id='tundra-shop-app']/div[2]/div/div[2]/div[2]/div[2]/div[4]/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/shop/official-burrito-blanket/product/burrito-blanket/?pn=1&pos=3')]", "xpath:href"],
+        ["xpath=//div[4]/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bcee9ed-1956-4d61-ad19-de369f0d87d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm",
+      "targets": [
+        ["css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "3da4860e-4dc4-4246-91c2-d4d89f6a868f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm",
+      "targets": [
+        ["css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "3575daec-1aef-4251-9306-9d86fb1fc426",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm",
+      "targets": [
+        ["css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d5792cf-6684-43b0-8f63-47561e2b5e2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm",
+      "targets": [
+        ["css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a417605c-686c-4523-ad96-a681d6323f75",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm",
+      "targets": [
+        ["css=.HT9g4kA6qvr9AzRTwLfs > .Mz4A7UH7jGRGxBRC7ixm", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a333e43d-708b-4890-8ad6-3aab479b16dd",
+      "comment": "",
+      "command": "//runScript",
+      "target": "window.scrollTo(0,641)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2229b5c-9132-4116-b183-dd42be893e85",
+      "comment": "",
+      "command": "//store",
+      "target": "true",
+      "targets": [],
+      "value": "!errorIgnore"
+    }, {
+      "id": "78d6bd63-a520-4ecd-93eb-05f3468b90d1",
+      "comment": "",
+      "command": "//verifyElementPresent",
+      "target": "css=.YlrcznSGcDEg_AhPNHqt > .CwnOs4oL8oWmYWqSY_56",
+      "targets": [],
+      "value": "link"
+    }, {
+      "id": "2fe7b673-e765-4608-bc7e-27af8db9747d",
+      "comment": "",
+      "command": "//if",
+      "target": "${!statusOK}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e514a1f3-80e9-4993-984c-2deb5c435b12",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.YlrcznSGcDEg_AhPNHqt > .CwnOs4oL8oWmYWqSY_56",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a02b56e7-2d5c-472e-866d-9b8f3bc2459e",
+      "comment": "",
+      "command": "//end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "50fe5230-2ffe-4d5c-ac93-71a0fb8e010d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7234253f-4d43-40e7-9807-6e65616a52c6"]
+  }],
+  "urls": ["https://www.tundra.com/"],
+  "plugins": []
+}
