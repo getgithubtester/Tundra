@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "2b1c2d92-1260-46d1-9de4-7ec931457d36",
+		"name": "REST API tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test a: GET random user (userID), print address to output and verify e-mail",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var userIDs = [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\"] \r",
+							"\r",
+							"pm.variables.set(\"userID\", userIDs[_.random(userIDs.length -1)]);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Print JSON to console\r",
+							"console.log(pm.response.json())\r",
+							"\r",
+							"//Print address to console\r",
+							"var responseInJson = pm.response.json();\r",
+							"\r",
+							"console.log(responseInJson.name +\"'s address is:\")\r",
+							"console.log(\"Street: \"+responseInJson.address.street)\r",
+							"console.log(\"Suite: \"+responseInJson.address.suite)\r",
+							"console.log(\"City: \"+responseInJson.address.city)\r",
+							"console.log(\"Zipcode: \"+responseInJson.address.zipcode)\r",
+							"\r",
+							"//Print e-mail address to console\r",
+							"console.log(\"\\n\" +responseInJson.name +\"'s e-mail address is: \" +responseInJson.email) \r",
+							"\r",
+							"//-------------------------------------------------------------------\r",
+							"//Verify if email is present\r",
+							"pm.test(\"Body contains email\", function () \r",
+							"{\r",
+							"    pm.expect(pm.response.text()).to.include(\"email\");\r",
+							"});\r",
+							"\r",
+							"//Verify e-mail has @\r",
+							"pm.test(\"Verify e-mail has @\", function () \r",
+							"{\r",
+							"    pm.expect(responseInJson.email).is.to.include(\"@\")\r",
+							"});\r",
+							"\r",
+							"//Verify e-mail has .\r",
+							"pm.test(\"Verify e-mail has .\", function () \r",
+							"{\r",
+							"    pm.expect(responseInJson.email).is.to.include(\".\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n\"userID\": pm.variables.get(\"userID\")\r\n}\r\n\r\n\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users/:id",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{userID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test b: GET and verify random user's posts",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var userIDs = [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\"] \r",
+							"\r",
+							"pm.variables.set(\"userID\", userIDs[_.random(userIDs.length -1)]);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Print JSON to console\r",
+							"console.log(pm.response.json())\r",
+							"\r",
+							"\r",
+							"//JSON schema\r",
+							"var schema = {\r",
+							"    \"$schema\": \"http://json-schema.org/draft-07/schema\",\r",
+							"    \"$id\": \"http://example.com/example.json\",\r",
+							"    \"type\": \"object\",\r",
+							"    \"title\": \"The root schema\",\r",
+							"    \"description\": \"The root schema comprises the entire JSON document.\",\r",
+							"    \"default\": {},\r",
+							"    \"examples\": [\r",
+							"        {\r",
+							"            \"userId\": 1,\r",
+							"            \"id\": 1,\r",
+							"            \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\r",
+							"            \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\r",
+							"        }\r",
+							"    ],\r",
+							"    \"required\": [\r",
+							"        \"userId\",\r",
+							"        \"id\",\r",
+							"        \"title\",\r",
+							"        \"body\"\r",
+							"    ],\r",
+							"    \"properties\": {\r",
+							"        \"userId\": {\r",
+							"            \"$id\": \"#/properties/userId\",\r",
+							"            \"type\": \"integer\",\r",
+							"            \"title\": \"The userId schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": 0,\r",
+							"            \"examples\": [1]\r",
+							"        },\r",
+							"        \"id\": {\r",
+							"            \"$id\": \"#/properties/id\",\r",
+							"            \"type\": \"integer\",\r",
+							"            \"title\": \"The id schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": 0,\r",
+							"            \"examples\": [1]\r",
+							"        },\r",
+							"        \"title\": {\r",
+							"            \"$id\": \"#/properties/title\",\r",
+							"            \"type\": \"string\",\r",
+							"            \"title\": \"The title schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": \"\",\r",
+							"            \"examples\": [\r",
+							"                \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\"\r",
+							"            ]\r",
+							"        },\r",
+							"        \"body\": {\r",
+							"            \"$id\": \"#/properties/body\",\r",
+							"            \"type\": \"string\",\r",
+							"            \"title\": \"The body schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": \"\",\r",
+							"            \"examples\": [\r",
+							"                \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\r",
+							"            ]\r",
+							"        }\r",
+							"    },\r",
+							"    \"additionalProperties\": true\r",
+							"}\r",
+							"\r",
+							"\r",
+							"pm.test(\"Schema Validation\", function() \r",
+							"{\r",
+							"    var result=tv4.validateResult(pm.response.json(), schema);\r",
+							"\r",
+							"    if(!result.valid) \r",
+							"        {\r",
+							"\t        console.log(result);\r",
+							"\t    }\r",
+							"\r",
+							"\tpm.expect(result.valid).to.be.true;\r",
+							"})\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n\"userID\": pm.variables.get(\"userID\")\r\n}\r\n\r\n\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/:userId",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test c: POST",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Print JSON to console\r",
+							"console.log(pm.response.json())\r",
+							"\r",
+							"\r",
+							"//JSON schema\r",
+							"var schema = {\r",
+							"    \"$schema\": \"http://json-schema.org/draft-07/schema\",\r",
+							"    \"$id\": \"http://example.com/example.json\",\r",
+							"    \"type\": \"object\",\r",
+							"    \"title\": \"The root schema\",\r",
+							"    \"description\": \"The root schema comprises the entire JSON document.\",\r",
+							"    \"default\": {},\r",
+							"    \"examples\": [\r",
+							"        {\r",
+							"            \"userId\": 1,\r",
+							"            \"id\": 1,\r",
+							"            \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\r",
+							"            \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\r",
+							"        }\r",
+							"    ],\r",
+							"    \"required\": [\r",
+							"        \"userId\",\r",
+							"        \"id\",\r",
+							"        \"title\",\r",
+							"        \"body\"\r",
+							"    ],\r",
+							"    \"properties\": {\r",
+							"        \"userId\": {\r",
+							"            \"$id\": \"#/properties/userId\",\r",
+							"            \"type\": \"integer\",\r",
+							"            \"title\": \"The userId schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": 0,\r",
+							"            \"examples\": [1]\r",
+							"        },\r",
+							"        \"id\": {\r",
+							"            \"$id\": \"#/properties/id\",\r",
+							"            \"type\": \"integer\",\r",
+							"            \"title\": \"The id schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": 0,\r",
+							"            \"examples\": [1]\r",
+							"        },\r",
+							"        \"title\": {\r",
+							"            \"$id\": \"#/properties/title\",\r",
+							"            \"type\": \"string\",\r",
+							"            \"title\": \"The title schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": \"\",\r",
+							"            \"examples\": [\r",
+							"                \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\"\r",
+							"            ]\r",
+							"        },\r",
+							"        \"body\": {\r",
+							"            \"$id\": \"#/properties/body\",\r",
+							"            \"type\": \"string\",\r",
+							"            \"title\": \"The body schema\",\r",
+							"            \"description\": \"An explanation about the purpose of this instance.\",\r",
+							"            \"default\": \"\",\r",
+							"            \"examples\": [\r",
+							"                \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\r",
+							"            ]\r",
+							"        }\r",
+							"    },\r",
+							"    \"additionalProperties\": true\r",
+							"}\r",
+							"\r",
+							"\r",
+							"pm.test(\"Schema Validation\", function() \r",
+							"{\r",
+							"    var result=tv4.validateResult(pm.response.json(), schema);\r",
+							"\r",
+							"    if(!result.valid) \r",
+							"        {\r",
+							"\t        console.log(result);\r",
+							"\t    }\r",
+							"\r",
+							"\tpm.expect(result.valid).to.be.true;\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/?id=\"102\"&userId=\"9\"&title=\"This is a test\"&body=\"Test 1 2 3\"",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "\"102\""
+						},
+						{
+							"key": "userId",
+							"value": "\"9\""
+						},
+						{
+							"key": "title",
+							"value": "\"This is a test\""
+						},
+						{
+							"key": "body",
+							"value": "\"Test 1 2 3\""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "test",
+			"value": "https://jsonplaceholder.typicode.com/users/"
+		}
+	]
+}
